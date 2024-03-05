@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Splatoon 2D</title>
+    <link rel="stylesheet" href="./styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+
+<main id="game">
+    <img id="logo" src="./assets/logo.png" width="300px" alt="splatoon 2D"/>
+    <div id="timer" class="block"></div>
+    <div id="start" class="block">
+        <button type="button"></button>
+    </div>
+    <div id="app" class="container">
+        <img class="splash" src="./assets/tache1.png" width="20%" alt=""/>
+        <img class="splash" src="./assets/tache2.png" width="20%" alt=""/>
+        <img class="splash" src="./assets/tache3.png" width="20%" alt=""/>
+    </div>
+    <div class="score one block">
+        <span>Score rose:</span>
+        <span class="score"></span>
+    </div>
+    <div class="score two block">
+        <span>Score vert:</span>
+        <span class="score"></span>
+    </div>
+</main>
+
+<script type="module">
+    import Game from "./scripts/Game.js";
+
+    new Game({timer: 30});
+</script>
+</body>
+</html>

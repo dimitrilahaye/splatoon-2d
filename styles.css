@@ -1,0 +1,125 @@
+body {
+    background: url(./assets/bckg.jpeg) center center;
+    background-size: auto;
+}
+
+main {
+    --black: #191919;
+    --pink: #FF6684;
+    --green: #2EEB36;
+}
+
+button {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#logo {
+    display: block;
+    margin: 0 auto;
+}
+
+.gameover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: red;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-family: monospace;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 5px 0;
+}
+
+.block {
+    background: var(--black);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-family: monospace;
+    padding: 10px 0;
+    margin: 0 auto;
+    border: 10px solid var(--black);
+    border-top: 0;
+    border-bottom: 0;
+    height: 20px;
+}
+
+.splash {
+    position: absolute;
+}
+
+.splash:nth-of-type(1) {
+    left: -80px;
+    transform: rotate(25deg);
+}
+
+.splash:nth-of-type(2) {
+    right: -87px;
+    bottom: 0;
+    transform: rotate(-83deg);
+}
+
+.splash:nth-of-type(3) {
+    right: -10px;
+    transform: rotate(17deg);
+    top: -117px;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    background: var(--black);
+    display: grid;
+    border: 10px solid var(--black);
+}
+
+.container .case {
+    background: white;
+    border: solid 1px var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .rose,
+.container .player.one {
+    background: var(--pink);
+}
+
+.container .vert,
+.container .player.two {
+    background: var(--green);
+}
+
+.container .power-up {
+    background-color: yellow;
+}
+
+.container .power-up i {
+    line-height: 0;
+}
+
+@-webkit-keyframes blinker {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.6;
+    }
+}
+
+.player, .power-up {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 0.6s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-direction: alternate;
+}
